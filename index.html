@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Dashboard Interface for Desafio 3 with real-time statistics and glassmorphism design.">
+    <title>Desafio 3 - Cloud Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="top-nav glass">
+            <h1>Cloud Infrastructure</h1>
+            <button class="primary-btn" id="refreshBtn">
+                <span class="btn-text">Refresh Data</span>
+                <div class="btn-loader"></div>
+            </button>
+        </header>
+
+        <main class="dashboard">
+            <div class="card glass">
+                <h2>Server Status</h2>
+                <p class="status-text" id="serverStatus">
+                    <span class="status-indicator online"></span>
+                    Online
+                </p>
+            </div>
+            
+            <div class="card glass">
+                <h2>CPU Usage</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="cpuProgress" style="width: 45%;"></div>
+                </div>
+                <p class="metric" id="cpuMetric">45%</p>
+            </div>
+
+            <div class="card glass">
+                <h2>Active Connections</h2>
+                <p class="metric large" id="connectionsMetric">1,204</p>
+            </div>
+            
+            <div class="card glass">
+                <h2>Network Traffic</h2>
+                <div class="chart-container">
+                    <div class="bar" style="height: 30%;"></div>
+                    <div class="bar" style="height: 50%;"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                    <div class="bar" style="height: 90%;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
